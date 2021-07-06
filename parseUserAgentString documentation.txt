@@ -1,7 +1,10 @@
 parseUserAgentString.php Class
 Written by Thomas Parkison.
 
-This class function has been written to be as light-weight as possible yet still capable of parsing the most popular user agent strings that are used on the public Internet. Unlike other user agent parsers this class function uses simple regular expressions to parse the user agents. Other functions may use huge lists of browser names (for instance, BrowseCap) that more often than not require hundreds of megabytes of RAM to store during execution and on shared hosting that's a no-no. This function has been written to be very efficient, quick to execute and parse, and use very little RAM and CPU to do so. This class function is shared hosting friendly!
+This class function has been written to be as light-weight as possible yet still capable of parsing the most popular user agent strings that are used on the public Internet.
+Unlike other user agent parsers this class function uses simple regular expressions to parse the user agents.
+Other functions may use huge lists of browser names (for instance, BrowseCap) that more often than not require hundreds of megabytes of RAM to store during execution and on shared hosting that's a no-no.
+This function has been written to be very efficient, quick to execute and parse, and use very little RAM and CPU to do so. This class function is shared hosting friendly!
 
 How to use this class function...
 
