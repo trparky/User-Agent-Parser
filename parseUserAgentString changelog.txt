@@ -1,0 +1,70 @@
+parseUserAgentString.php Class
+Written by Thomas Parkison.
+
+This class function has been written to be as light-weight as possible yet still capable of parsing the most popular user agent strings that are used on the public Internet. Unlike other user agent parsers this class function uses
+simple regular expressions to parse the user agents. Other functions may use huge lists of browser names (for instance, BrowseCap) that more often than not require hundreds of megabytes of RAM to store during execution
+and on shared hosting that's a no-no. This function has been written to be very efficient, quick to execute and parse, and use very little RAM and CPU to do so. This class function is shared hosting friendly!
+
+Official ChangeLog
+
+Version 1.00 -- Initial release.
+
+Version 1.01 -- Added a mess load of new user agent detection code to detect several new bots. Added detection for Windows Phone OS.
+
+Version 1.02 -- Added an additional signature for mangled Internet Explorer User Agent strings.
+
+Version 1.03 -- Fixed several bugs in which the browsername, osname, browserversion, and fullname variables may not have been accessible from outside the class. Introduced some settings to the class, they are includeAndroidName, includeWindowsName, and includeMacOSName. These settings tell the class if you want the OS name string to include the names of the operating systems. For instance, KitKat for Android, Windows 7 for Windows, and Yosemite for Mac OSX. Included detection for Android 5.0 Lollipop. Fixed some possible issues with detecting single number Android OS versions.
+
+Version 1.04 -- Fixed version number parsing for Google Chrome, Firefox, and Opera.
+
+Version 1.05 -- Added detection for BetaBot. Added two new variables exposed to the outside of the class. They are regexpattern and knownbrowser. The regexpattern variable contains the regex pattern that the class used to identify the web browser by the user agent string. The knownbrowser variable is usually True but if the class can't identify a web browser by the user agent string the variable is then set to False. This should help in integrating this class into other projects. You can use the knownbrowser variable to check if the class identified the browser.
+
+Version 1.06 -- Fixed regex pattern used to detect the Mozilla suite.
+
+Version 1.07 -- Added detection methods for SeaMonkey, WaterFox, and Comodo IceDragon. Fixed detection for SRWare Iron. Renamed Iron to SRWare Iron.
+
+Version 1.08 -- Added RQSTBot Bot, RQST Crawler Bot, QupZilla and MemoryBot.  Fixed detection of CURL when combined with PHP.
+
+Version 1.09 -- Added support for SputnikImageBot along with detection for Mobile Internet Explorer on Windows Phone. Fixed some capability reporting for Internet Explorer Touch on Windows 8/8.1.
+
+Version 1.10 -- Added heritrix, GuzzleAyup, DuckDuckGo Favicons, Google-HTTP-Java-Client, and PictureBot bot. Improved Android version detection. Improved version reporting for Palemoon, SeaMonkey, WaterFox, and Comodo IceDragon. Introduced two new public class variables; firefoxClone and chromeClone. They are Boolean variables and they should be self-explanatory.
+
+Version 1.11 -- Added DomainSigmaCrawler bot. Added an additional signature for Google Chrome on iOS devices. Added a signature to detect UCBrowser and OpenBSD. Added several new public class Boolean variables for use in helping to detect operating systems and browser types. They are $firefox, $ie, $chrome, $safari, $opera, $ios, $android, $windows, $linux, $bsd, $chromeos, $macosx, and $blackberry.
+
+Version 1.12 -- Removed a return statement that shouldn't have been there.
+
+Version 1.13 -- Added new signatures for several bots. Added detection for Chromium. Fixed detection of Java related user agents.
+
+Version 1.14 -- Added new signatures for several bots. Added detection for an obscure Opera user agent.
+
+Version 1.15 -- Added detection for several new bots along with Ad Muncher, WhiteHat Aviator, and added some additional signatures for Opera. Fixed some issues in which Google Chrome was being detected as Apple Safari, this has been fixed by re-arranging some of the signatures and putting the Google Chrome signatures higher up on the detection chain.
+
+Version 1.16 -- Added a new setting called $treatClonesAsTheRealThing, this setting should be self-explanatory. Details about the usage is in the documentation. Added signatures to detect Coc Coc Browser, Yandex Browser, Cyberfox, DomainAppender bot, Prlog bot, YisouSpider bot, RSSMicro bot, the Go HTTP Package, WebIndex bot, URLGrabber bot, LinkDexBot, SISTRIX bot, and detection for legacy Netscape user agents. Added an additional signature for some obscure Opera user agent strings. Cleaned up some of the False statements in the code that didn't need to be there.
+
+Version 1.17 -- Added ADVBot, Voltron, Dillo bot, Owler bot, URLfilterDB-Crawler Bot, and Dazoobot. Fixed an Opera signature in which it was capturing the wrong part of the string to get the version of the browser. Added an additional signature for SRWare Iron. Added a signature to detect OSSProxy, Sleipnir, Lunascape (Internet Explorer, WebKit, and Gecko/Firefox modes), Qt Integrated Browser, CoolNovo, and Vivaldi.
+
+Version 1.18 -- Added several new bots and browsers. Added an additional signature for detecting Ruby. Tweaked two Internet Explorer signatures to correct some incorrect detections. Added two new signatures for Touch-sensitive Internet Explorer.
+
+Version 1.19 -- Added detecting for Internet Explorer 12 (Microsoft Edge). Implemented three new Class variables, they are nextgenie, nextgeninternetexplorer, and microsoftspartanie. They are to help distinguish the legacy Internet Explorer from the new Internet Explorer based upon Project Spartan. There's a new setting called treatMicrosoftEdgeLikeLegacyInternetExplorer, the default value is False so Project Spartan-based Internet Explorer won't be identified as legacy Internet Explorer by the script. Added several new bots and an additional signature for Safari on Mac. Added detection for the future MacOSX 10.11 codenamed Gala.
+
+Version 1.20 -- Added an additional signature for OCBrowser on Nokia OS. Added a signature for Arora and Lynx. Includes a patch contributed by Victor Cobos to fix detection for Waterfox and Apple iOS.
+
+Version 1.21 -- Added detection for 1Password on iOS. Added additional OS detection for obscure iOS user agent strings.
+
+Version 1.22 -- Added additional OS detection for recent Android versions.
+
+Version 1.23 -- Added detection for Microsoft (Chrome) Edge along with additional OS detection for recent Android versions.
+
+Version 1.24 -- Forgot to set the Edge flag for Microsoft (Chrome) Edge.
+
+Version 1.26 -- Added support for new versions of MacOS.
+
+Version 1.27 -- Removed detection Blackberry devices, they’re no longer a viable platform so forget about it.
+
+Version 1.28 -- Added more flags for MacOS.
+
+Version 1.29 -- Added preliminary detection for the future Windows 11.
+
+Version 1.30 -- Changed some stuff with detection of Microsoft Chrome Edge.
+
+Version 1.31 -- Cleaned up some code and removed duplicated code.
