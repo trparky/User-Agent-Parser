@@ -2871,7 +2871,7 @@ class parseUserAgentStringClass {
       				elseif ($windowsVersion == 6.2) $operatingSystem = "Windows 8";
       				elseif ($windowsVersion == 6.3) $operatingSystem = "Windows 8.1";
       				elseif (($windowsVersion == 6.4) or ($windowsVersion == 10)) $operatingSystem = "Windows 10";
-      				elseif ($windowsVersion == 11) $operatingSystem = "Windows 11";
+      				elseif (($windowsVersion == 6.5) or ($windowsVersion == 11)) $operatingSystem = "Windows 11";
       				elseif ($windowsVersion == 8.1) {
       					$this->windowsNTVersion = 6.3;
       					$operatingSystem = "Windows 8.1";
