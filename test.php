@@ -10,4 +10,5 @@ $parser->parseUserAgentString("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWe
 if ($parser->knownbrowser) print $parser->fullname;
 else print "Unknown Web Browser";
 
-print_r($parserArray);
+print "\n\n";
+print_r($parser);
