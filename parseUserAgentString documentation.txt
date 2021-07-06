@@ -1,0 +1,74 @@
+parseUserAgentString.php Class
+Written by Thomas Parkison.
+
+This class function has been written to be as light-weight as possible yet still capable of parsing the most popular user agent strings that are used on the public Internet. Unlike other user agent parsers this class function uses simple regular expressions to parse the user agents. Other functions may use huge lists of browser names (for instance, BrowseCap) that more often than not require hundreds of megabytes of RAM to store during execution and on shared hosting that's a no-no. This function has been written to be very efficient, quick to execute and parse, and use very little RAM and CPU to do so. This class function is shared hosting friendly!
+
+How to use this class function...
+
+include('parseUserAgentString.php');
+$parser = new parseUserAgentStringClass(); // This creates a new instance of this class object.
+$parser->includeAndroidName = true;
+$parser->includeWindowsName = true;
+$parser->includeMacOSName = true;
+$parser->treatClonesAsTheRealThing = true;
+$parser->treatMicrosoftEdgeLikeLegacyInternetExplorer = false;
+$parser->parseUserAgentString("[Your User Agent String Goes Here]"); // This calls the parser function in the class object.
+
+if ($parser->knownbrowser) { // Checks to see if the class knows about the browser in question.
+	// Put whatever code you're going to run after identifying the browser here.
+}
+else {
+	// Unknown browser
+}
+
+All returned data is stored as variables in the class object so you would use the following code
+to access the data once the function above has been called.
+$parser->fullname;
+
+$parser->browsername -- Browser Name
+$parser->osname -- Operating System Name
+$parser->browserversion -- Browser Version
+$parser->type -- Device Type (PC, mobile, or bot)
+
+Boolean Values, it should be self-explanatory.
+$parser->javascript
+$parser->iframe
+$parser->css
+$parser->frames
+$parser->cookies
+$parser->backgroundsounds
+$parser->vbscript
+$parser->java
+$parser->activex
+$parser->mobile
+$parser->x86 (This indicates that the host OS is a 32-bit system)
+$parser->x64 (This indicates that the host OS is a 64-bit system)
+
+These are variables that are used for browser types, they are Boolean values.
+$parser->firefox
+$parser->firefoxClone
+$parser->chrome
+$parser->chromeClone
+$parser->internetexplorer
+$parser->ie (short version of the above variable)
+$parser->safari
+$parser->opera
+
+This is a new variable that distinguish legacy Internet Explorer from the new Microsoft Edge.
+$parser->microsoftEdge
+
+These are variables that are used for operating system types, they are Boolean values.
+$parser->ios
+$parser->android
+$parser->windows
+$parser->linux
+$parser->bsd
+$parser->chromeos
+$parser->macosx
+
+Note, ordinarily the $firefox variable will not be set to True if the script encounters a Firefox clone browser, only the $firefoxClone variable will be set to True. The $chrome and $internetexplorer (and $ie) variables operate the same way. However, if the $treatClonesAsTheRealThing is set to True (which ordinarily is set to False), the $firefox, $chrome, and $internetexplorer (and $ie) variables will be set to True if a clone is encountered.
+
+$parser->knownbrowser (This is usually True but if the class can't identify the browser, it will be set to False)
+
+$parser->regexpattern
+Above is the variable of the class that contains the actual regex pattern that was used to identify a particular web browser.
