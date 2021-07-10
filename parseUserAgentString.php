@@ -3064,8 +3064,8 @@ class parseUserAgentStringClass {
       				elseif ($androidVersion == 7) $operatingSystem .= " Nougat";
       				elseif ($androidVersion == 8) $operatingSystem .= " Oreo";
       				elseif ($androidVersion == 9) $operatingSystem .= " Pie";
-      				elseif ($androidVersion == 10) $operatingSystem .= " Android 10";
-      				elseif ($androidVersion == 11) $operatingSystem .= " Android 11";
+      				elseif ($androidVersion == 10) $operatingSystem .= " 10";
+      				elseif ($androidVersion == 11) $operatingSystem .= " 11";
       			}
 		}
 		else {
