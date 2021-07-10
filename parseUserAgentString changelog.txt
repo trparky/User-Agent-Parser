@@ -68,3 +68,5 @@ Version 1.29 -- Added preliminary detection for the future Windows 11.
 Version 1.30 -- Changed some stuff with detection of Microsoft Chrome Edge.
 
 Version 1.31 -- Cleaned up some code and removed duplicated code.
+
+Version 1.32 -- Fixed issues with Android OS names when the version is 10 or higher.
