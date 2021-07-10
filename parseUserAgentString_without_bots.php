@@ -2029,7 +2029,7 @@ class parseUserAgentStringClass {
 			$androidVersion = floatval($androidVersionPieces[0] . "." . $androidVersionPieces[1]);
 			$this->androidVersion = $androidVersion;
 
-			if ($this->includeAndroidName) {
+			if (($this->includeAndroidName) && ($androidVersion < 10)) {
 				if ($androidVersion == 2.1) $operatingSystem .= " Eclair";
 				elseif ($androidVersion == 2.2) $operatingSystem .= " Froyo";
 				elseif ($androidVersion == 2.3) $operatingSystem .= " Gingerbread";
@@ -2042,8 +2042,6 @@ class parseUserAgentStringClass {
 				elseif ($androidVersion == 7) $operatingSystem .= " Nougat";
 				elseif ($androidVersion == 8) $operatingSystem .= " Oreo";
 				elseif ($androidVersion == 9) $operatingSystem .= " Pie";
-				elseif ($androidVersion == 10) $operatingSystem .= " 10";
-				elseif ($androidVersion == 11) $operatingSystem .= " 11";
 			}
 		}
 		else {
