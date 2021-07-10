@@ -2029,22 +2029,22 @@ class parseUserAgentStringClass {
 			$androidVersion = floatval($androidVersionPieces[0] . "." . $androidVersionPieces[1]);
 			$this->androidVersion = $androidVersion;
 
-      			if ($this->includeAndroidName) {
-      				if ($androidVersion == 2.1) $operatingSystem .= " Eclair";
-      				elseif ($androidVersion == 2.2) $operatingSystem .= " Froyo";
-      				elseif ($androidVersion == 2.3) $operatingSystem .= " Gingerbread";
-      				elseif (($androidVersion == 3) or ($androidVersion == 3.0)) $operatingSystem .= " Honeycomb";
-      				elseif ($androidVersion == 4) $operatingSystem .= " Ice Cream Sandwich";
-      				elseif (($androidVersion == 4.1) or ($androidVersion == 4.2) or ($androidVersion == 4.3)) $operatingSystem .= " Jellybean";
-      				elseif ($androidVersion == 4.4) $operatingSystem .= " KitKat";
-      				elseif (($androidVersion == 5) or ($androidVersion == 5.1)) $operatingSystem .= " Lollipop";
-      				elseif ($androidVersion == 6) $operatingSystem .= " Marshmallow";
-      				elseif ($androidVersion == 7) $operatingSystem .= " Nougat";
-      				elseif ($androidVersion == 8) $operatingSystem .= " Oreo";
-      				elseif ($androidVersion == 9) $operatingSystem .= " Pie";
-      				elseif ($androidVersion == 10) $operatingSystem .= " 10";
-      				elseif ($androidVersion == 11) $operatingSystem .= " 11";
-      			}
+			if ($this->includeAndroidName) {
+				if ($androidVersion == 2.1) $operatingSystem .= " Eclair";
+				elseif ($androidVersion == 2.2) $operatingSystem .= " Froyo";
+				elseif ($androidVersion == 2.3) $operatingSystem .= " Gingerbread";
+				elseif (($androidVersion == 3) or ($androidVersion == 3.0)) $operatingSystem .= " Honeycomb";
+				elseif ($androidVersion == 4) $operatingSystem .= " Ice Cream Sandwich";
+				elseif (($androidVersion == 4.1) or ($androidVersion == 4.2) or ($androidVersion == 4.3)) $operatingSystem .= " Jellybean";
+				elseif ($androidVersion == 4.4) $operatingSystem .= " KitKat";
+				elseif (($androidVersion == 5) or ($androidVersion == 5.1)) $operatingSystem .= " Lollipop";
+				elseif ($androidVersion == 6) $operatingSystem .= " Marshmallow";
+				elseif ($androidVersion == 7) $operatingSystem .= " Nougat";
+				elseif ($androidVersion == 8) $operatingSystem .= " Oreo";
+				elseif ($androidVersion == 9) $operatingSystem .= " Pie";
+				elseif ($androidVersion == 10) $operatingSystem .= " 10";
+				elseif ($androidVersion == 11) $operatingSystem .= " 11";
+			}
 		}
 		else {
 			if ($version == "GBE") {
