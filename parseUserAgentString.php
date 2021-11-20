@@ -3,14 +3,14 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.34
+Version 1.35
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.34";
+	public $classVersion = "1.35";
 
 	public $css = false;
 	public $css1 = false;
@@ -296,7 +296,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -320,7 +320,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -613,7 +613,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -638,7 +638,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -662,7 +662,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -687,7 +687,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -712,7 +712,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -737,7 +737,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -761,7 +761,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -785,7 +785,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypePC;
 			$this->javascript = true;
@@ -962,7 +962,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypeMobile;
 			$this->javascript = true;
@@ -986,7 +986,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$this->type = $this->deviceTypeMobile;
 			$this->javascript = true;
@@ -1303,7 +1303,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1327,7 +1327,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1351,7 +1351,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1375,7 +1375,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1412,7 +1412,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1435,7 +1435,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1458,7 +1458,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1504,7 +1504,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1527,7 +1527,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
@@ -1550,7 +1550,7 @@ class parseUserAgentStringClass {
 			$this->rawVersion['major'] = $t[0];
 			$this->rawVersion['minor'] = $t[1];
 			if (isset($t[2])) $this->rawVersion['build'] = $t[2];
-			if (isset($t[3]) $this->rawVersion['rev'] = $t[3];
+			if (isset($t[3])) $this->rawVersion['rev'] = $t[3];
 
 			$browserVersion = $t[0] . "." . $t[1] . $t[2];
 
