@@ -102,3 +102,6 @@ Cleaned up some code and removed duplicated code.
 
 Version 1.32
 Fixed issues with Android OS names when the version is 10 or higher.
+
+Version 1.33
+Included isset() checks before applying the values to build and rev values in the rawVersion array.
