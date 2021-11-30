@@ -3,14 +3,14 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.35
+Version 1.36
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.35";
+	public $classVersion = "1.36";
 
 	public $css = false;
 	public $css1 = false;
@@ -2026,7 +2026,10 @@ class parseUserAgentStringClass {
 		if (preg_match('/\A[0-9.]*\Z/i', $version)) {
 			$operatingSystem = "Android " . trim($version);
 			$androidVersionPieces = explode(".", trim($version));
-			$androidVersion = floatval($androidVersionPieces[0] . "." . $androidVersionPieces[1]);
+
+			if ((isset($androidVersionPieces[0])) and (isset($androidVersionPieces[1]))) $androidVersion = floatval($androidVersionPieces[0] . "." . $androidVersionPieces[1]);
+			else $androidVersion = floatval($androidVersionPieces[0]);
+
 			$this->androidVersion = $androidVersion;
 
 			if (($this->includeAndroidName) && ($androidVersion < 10)) {

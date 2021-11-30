@@ -111,3 +111,6 @@ Improved upon isset() fix.
 
 Version 1.35
 Fixed parse issue.
+
+Version 1.36
+Fixed issue in processAndroidVersion() function. Thanks goes out to longomes for reporting this issue to me.
