@@ -114,3 +114,6 @@ Fixed parse issue.
 
 Version 1.36
 Fixed issue in processAndroidVersion() function. Thanks goes out to longomes for reporting this issue to me.
+
+Version 1.37
+Simplified an IF statement in the processAndroidVersion() function.

@@ -3,7 +3,7 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.36
+Version 1.37
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
@@ -3069,11 +3069,9 @@ class parseUserAgentStringClass {
 				elseif ($androidVersion == 9) $operatingSystem .= " Pie";
 			}
 		}
-		else {
-			if ($version == "GBE") {
-				$operatingSystem = "Android version 2.3";
-				if ($this->includeAndroidName) $operatingSystem .= " Gingerbread";
-			}
+		elseif ($version == "GBE") {
+			$operatingSystem = "Android version 2.3";
+			if ($this->includeAndroidName) $operatingSystem .= " Gingerbread";
 		}
 
 		return $operatingSystem;
