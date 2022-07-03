@@ -10,7 +10,7 @@ thomas.parkison@gmail.com
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.36";
+	public $classVersion = "1.37";
 
 	public $css = false;
 	public $css1 = false;
