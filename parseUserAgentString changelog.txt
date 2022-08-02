@@ -117,3 +117,6 @@ Fixed issue in processAndroidVersion() function. Thanks goes out to longomes for
 
 Version 1.37
 Simplified an IF statement in the processAndroidVersion() function.
+
+Version 1.38
+Fixed multiple issues with Mac OS version detection by bringing in changes from a fork of my project. Thanks goes out to nickwilmsmeyer and his fork of the project at https://github.com/nickwilmsmeyer/User-Agent-Parser.

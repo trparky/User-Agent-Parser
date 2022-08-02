@@ -3,14 +3,14 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.37
+Version 1.38
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.37";
+	public $classVersion = "1.38";
 
 	public $css = false;
 	public $css1 = false;
@@ -1797,7 +1797,7 @@ class parseUserAgentStringClass {
 				$this->osname = $operatingSystem;
 			}
 			else $this->fullname = "$browserName (unknown version)";
-			
+
 			$this->browsername = $browserName;
 			$this->browserversion = 0;
 		}
@@ -1867,31 +1867,31 @@ class parseUserAgentStringClass {
       			$operatingSystem = "Unknown Windows NT Version";
       			$this->windowsNTVersion = "unknown";
       		}
-      		elseif (preg_match('/Mac OS X 10(?:_|\.){0,1}(?P<macOSXVersion>[0-9]{1,2})/', $userAgent, $matches)) {
+      		elseif (preg_match('/Mac OS X 10(?:_|\.){0,2}(?P<macOSXVersion>[0-9]{1,2})/', $userAgent, $matches)) {
       			$matches['macOSXVersion'] = trim($matches['macOSXVersion']);
 
-      			if (($matches['macOSXVersion'] != "10") and (strlen($matches['macOSXVersion']) == 2)) $matches['macOSXVersion'] = substr($matches['macOSXVersion'], 0, 1);
+      			if (($matches['macOSXVersion'] != "10") and (strlen($matches['macOSXVersion']) == 2)) $matches['macOSXVersion'] = substr($matches['macOSXVersion'], 0, 2);
 
       			$macosVersion = intval(trim($matches['macOSXVersion']), 10);
 
       			if ($this->includeMacOSName) {
-      				if ($macosVersion == 0) $operatingSystem = "Mac OSX 10.0 Cheetah";
-      				elseif ($macosVersion == 1) $operatingSystem = "Mac OSX 10.1 Puma";
-      				elseif ($macosVersion == 2) $operatingSystem = "Mac OSX 10.2 Jaguar";
-      				elseif ($macosVersion == 3) $operatingSystem = "Mac OSX 10.3 Panther";
-      				elseif ($macosVersion == 4) $operatingSystem = "Mac OSX 10.4 Tiger";
-      				elseif ($macosVersion == 5) $operatingSystem = "Mac OSX 10.5 Leopard";
-      				elseif ($macosVersion == 6) $operatingSystem = "Mac OSX 10.6 Snow Leopard";
-      				elseif ($macosVersion == 7) $operatingSystem = "Mac OSX 10.7 Lion";
-      				elseif ($macosVersion == 8) $operatingSystem = "Mac OSX 10.8 Mountain Lion";
-      				elseif ($macosVersion == 9) $operatingSystem = "Mac OSX 10.9 Mavericks";
-      				elseif ($macosVersion == 10) $operatingSystem = "Mac OSX 10.10 Yosemite";
-      				elseif ($macosVersion == 11) $operatingSystem = "Mac OSX 10.11 El Capitan";
-      				elseif ($macosVersion == 12) $operatingSystem = "Mac OSX 10.12 Sierra";
-      				elseif ($macosVersion == 13) $operatingSystem = "Mac OSX 10.13 High Sierra";
-      				elseif ($macosVersion == 14) $operatingSystem = "Mac OSX 10.14 Mojave";
-      				elseif ($macosVersion == 15) $operatingSystem = "Mac OSX 10.15 Catalina";
-      				else $operatingSystem = "Mac OSX 10 (Unknown Version)";
+      				if ($macosVersion == 0) $operatingSystem = "Mac OS X 10.0 Cheetah";
+      				elseif ($macosVersion == 1) $operatingSystem = "Mac OS X 10.1 Puma";
+      				elseif ($macosVersion == 2) $operatingSystem = "Mac OS X 10.2 Jaguar";
+      				elseif ($macosVersion == 3) $operatingSystem = "Mac OS X 10.3 Panther";
+      				elseif ($macosVersion == 4) $operatingSystem = "Mac OS X 10.4 Tiger";
+      				elseif ($macosVersion == 5) $operatingSystem = "Mac OS X 10.5 Leopard";
+      				elseif ($macosVersion == 6) $operatingSystem = "Mac OS X 10.6 Snow Leopard";
+      				elseif ($macosVersion == 7) $operatingSystem = "Mac OS X 10.7 Lion";
+      				elseif ($macosVersion == 8) $operatingSystem = "Mac OS X 10.8 Mountain Lion";
+      				elseif ($macosVersion == 9) $operatingSystem = "Mac OS X 10.9 Mavericks";
+      				elseif ($macosVersion == 10) $operatingSystem = "Mac OS X 10.10 Yosemite";
+      				elseif ($macosVersion == 11) $operatingSystem = "Mac OS X 10.11 El Capitan";
+      				elseif ($macosVersion == 12) $operatingSystem = "Mac OS 10.12 Sierra";
+      				elseif ($macosVersion == 13) $operatingSystem = "Mac OS 10.13 High Sierra";
+      				elseif ($macosVersion == 14) $operatingSystem = "Mac OS 10.14 Mojave";
+      				elseif ($macosVersion == 15) $operatingSystem = "Mac OS 10.15 Catalina";
+      				else $operatingSystem = "Mac OS 10 (Unknown Version)";
       			}
       			else $operatingSystem = "Mac OSX 10.$macosVersion";
 
@@ -1905,6 +1905,12 @@ class parseUserAgentStringClass {
       			$this->macos = true;
       			$operatingSystem = "Mac OS 11 Big Sur";
 	      	}
+			elseif (preg_match('/Mac OS 12/', $userAgent, $matches)) {
+				$this->macosVersion = 12;
+      			$this->type = $this->deviceTypePC;
+      			$this->macos = true;
+      			$operatingSystem = "Mac OS 12 Monterey";
+			}
       		elseif (preg_match('/PPC Mac OS X/', $userAgent, $matches)) {
       			$this->type = $this->deviceTypePC;
       			$operatingSystem = "PowerPC Mac OSX";
@@ -2008,7 +2014,7 @@ class parseUserAgentStringClass {
 		$this->regexpattern = $regExPattern;
 		return preg_match($regExPattern, $haystack, $matches);
 	}
-	
+
 	function getRawVersion($matches) {
 		$t = explode(".", trim($matches[1]));
 
@@ -2029,7 +2035,7 @@ class parseUserAgentStringClass {
 
 			if ((isset($androidVersionPieces[0])) and (isset($androidVersionPieces[1]))) $androidVersion = floatval($androidVersionPieces[0] . "." . $androidVersionPieces[1]);
 			else $androidVersion = floatval($androidVersionPieces[0]);
-
+			
 			$this->androidVersion = $androidVersion;
 
 			if (($this->includeAndroidName) && ($androidVersion < 10)) {
