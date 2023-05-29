@@ -3,14 +3,14 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.38
+Version 1.39
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.38";
+	public $classVersion = "1.39";
 
 	public $css = false;
 	public $css1 = false;
@@ -73,6 +73,16 @@ class parseUserAgentStringClass {
 	public $deviceTypeMobile = "mobile";
 	public $deviceTypePC = "PC";
 	public $deviceTypeScript = "script";
+
+	public $type = "";
+	public $android = "";
+	public $androidVersion = "";
+	public $processOperatingSystemString = "";
+	public $windows = "";
+	public $windowsNTVersion = "";
+	public $macosxv = "";
+	public $ios = "";
+	public $iosVersion = "";
 
 	function StringContains($haystack, $needle) {
 		if (stristr($haystack, $needle) === FALSE) return false;
