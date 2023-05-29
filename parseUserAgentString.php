@@ -74,6 +74,16 @@ class parseUserAgentStringClass {
 	public $deviceTypePC = "PC";
 	public $deviceTypeScript = "script";
 
+	public $type = "";
+	public $android = "";
+	public $androidVersion = "";
+	public $processOperatingSystemString = "";
+	public $windows = "";
+	public $windowsNTVersion = "";
+	public $macosxv = "";
+	public $ios = "";
+	public $iosVersion = "";
+	
 	function StringContains($haystack, $needle) {
 		if (stristr($haystack, $needle) === FALSE) return false;
 		else return true;
