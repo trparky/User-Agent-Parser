@@ -3,14 +3,14 @@
 /*
 
 parseUserAgentString.php Class (With Bots)
-Version 1.38
+Version 1.39
 Written by Thomas Parkison.
 thomas.parkison@gmail.com
 
 */
 
 class parseUserAgentStringClass {
-	public $classVersion = "1.38";
+	public $classVersion = "1.39";
 
 	public $css = false;
 	public $css1 = false;
